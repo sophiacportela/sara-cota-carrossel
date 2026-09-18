@@ -23,75 +23,49 @@
   .bege { background: #EDE0D0; color: #2C2C2C; }
 
   .eyebrow { position: relative; z-index: 1; font-size: 15px; letter-spacing: 0.16em; margin-bottom: 44px; opacity: 0.7; }
-  .headline { position: relative; z-index: 1; margin: 0; font-weight: 600; line-height: 1.22; font-size: 50px; }
-  .headline.playfair { color: #B8975A; font-size: 58px; }
-  .body { position: relative; z-index: 1; margin: 34px 0 0 0; font-size: 28px; line-height: 1.5; font-weight: 400; }
+  .headline { position: relative; z-index: 1; margin: 0; font-weight: 600; line-height: 1.25; font-size: 52px; }
+  .body { position: relative; z-index: 1; margin: 36px 0 0 0; font-size: 28px; line-height: 1.5; font-weight: 400; }
+  .body.dourado { color: #B8975A; font-weight: 600; }
 
   .footer { position: absolute; bottom: 64px; left: 96px; right: 96px; }
   .logo { position: relative; z-index: 1; font-family: 'DM Sans', sans-serif; font-size: 14px; letter-spacing: 0.16em; opacity: 0.7; text-align: center; }
 
-  .quizlist { position: relative; z-index: 1; margin-top: 52px; display: flex; flex-direction: column; }
+  .quizlist { position: relative; z-index: 1; margin-top: 56px; display: flex; flex-direction: column; }
   .quizitem { border-top: 1px solid rgba(44,44,44,0.2); padding: 26px 0; font-size: 28px; font-weight: 600; }
   .quizitem:first-child { border-top: none; }
-  .note { position: relative; z-index: 1; margin-top: 44px; font-size: 18px; opacity: 0.6; font-style: italic; }
+  .note { position: relative; z-index: 1; margin-top: 48px; font-size: 18px; opacity: 0.6; font-style: italic; }
 
-  .bignum { position: relative; z-index: 1; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 700; font-size: 340px; color: #B8975A; line-height: 1; text-align: center; }
-
-  .recap { position: relative; z-index: 1; margin-top: 44px; display: flex; flex-direction: column; gap: 24px; }
-  .recap-row { display: flex; align-items: baseline; gap: 24px; border-top: 1px solid rgba(245,237,227,0.18); padding-top: 22px; }
-  .recap-row:first-child { border-top: none; padding-top: 0; }
-  .recap-n { font-weight: 700; font-size: 42px; min-width: 80px; }
-  .recap-l { font-size: 26px; opacity: 0.9; }
+  .arrow { position: relative; z-index: 1; margin-top: 56px; font-size: 40px; color: #B8975A; }
 </style>
 </head>
 <body>
 
-<!-- Story 1 — Anúncio (Carvão) -->
-<div class="page carvao" data-document-role="page" data-label="1 - Anuncio">
-  <div class="eyebrow dm">NOVO NO FEED</div>
-  <h1 class="headline garamond">O prazo que decide se você chega pronta em dezembro.</h1>
-  <p class="body">Bioestimulador, preenchimento, pele e toxina. Cada procedimento no tempo certo. Carrossel completo no feed agora.</p>
-  <div class="footer"><div class="logo">SARA COTA</div></div>
-</div>
-
-<!-- Story 2 — Curiosidade (Bege) -->
-<div class="page bege" data-document-role="page" data-label="2 - Curiosidade">
-  <div class="eyebrow dm">ANTES DE VER O POST</div>
-  <h1 class="headline garamond">Um desses quatro prazos é o mais curto de todos.</h1>
+<!-- Story 1 — Pergunta, sem resposta (Bege) -->
+<div class="page bege" data-document-role="page" data-label="1 - Pergunta">
+  <div class="eyebrow dm">ANTES DAS FESTAS</div>
+  <h1 class="headline garamond">Um desses quatro procedimentos tem um prazo curto demais pra deixar pra última hora.</h1>
   <div class="quizlist">
     <div class="quizitem garamond">Bioestimulador de colágeno</div>
     <div class="quizitem garamond">Preenchimento</div>
     <div class="quizitem garamond">Cuidados com a pele</div>
     <div class="quizitem garamond">Toxina botulínica</div>
   </div>
-  <div class="note dm">Adicione a caixinha de enquete do Instagram aqui</div>
+  <div class="note dm">Adicione a caixinha de enquete do Instagram aqui — qual você acha que é?</div>
 </div>
 
-<!-- Story 3 — Revelação (Carvão + Dourado) -->
-<div class="page carvao" data-document-role="page" data-label="3 - Revelacao" style="text-align:center; align-items:center;">
-  <div class="bignum">15</div>
-  <p class="body" style="text-align:center;">dias. O prazo mais curto de todos — da toxina botulínica até o efeito completo.</p>
-  <div class="footer"><div class="logo">SARA COTA</div></div>
+<!-- Story 2 — Tensão, ainda sem resposta (Carvão) -->
+<div class="page carvao" data-document-role="page" data-label="2 - Tensao">
+  <div class="eyebrow dm">A RESPOSTA NÃO É ÓBVIA</div>
+  <h1 class="headline garamond">O prazo mais curto dos quatro é menor do que a maioria imagina.</h1>
+  <p class="body">E ele é o primeiro a fechar na agenda.</p>
 </div>
 
-<!-- Story 4 — Recapitulação (Bege) -->
-<div class="page bege" data-document-role="page" data-label="4 - Recapitulacao">
-  <div class="eyebrow dm">GUARDE ESSE STORY</div>
-  <h1 class="headline garamond">O cronograma completo.</h1>
-  <div class="recap" style="color:#2C2C2C;">
-    <div class="recap-row" style="border-color: rgba(44,44,44,0.15);"><div class="recap-n">90</div><div class="recap-l">bioestimulador de colágeno</div></div>
-    <div class="recap-row" style="border-color: rgba(44,44,44,0.15);"><div class="recap-n">60</div><div class="recap-l">preenchimento</div></div>
-    <div class="recap-row" style="border-color: rgba(44,44,44,0.15);"><div class="recap-n">30</div><div class="recap-l">cuidados com a pele</div></div>
-    <div class="recap-row" style="border-color: rgba(44,44,44,0.15);"><div class="recap-n">15</div><div class="recap-l">toxina botulínica</div></div>
-  </div>
-  <div class="footer"><div class="logo">SARA COTA</div></div>
-</div>
-
-<!-- Story 5 — CTA (Carvão, Dourado no destaque final) -->
-<div class="page carvao" data-document-role="page" data-label="5 - CTA">
-  <div class="eyebrow dm">AGENDA ABERTA</div>
-  <h1 class="headline garamond">Setembro é o último mês em que todos esses prazos ainda cabem antes das festas.</h1>
-  <p class="body" style="color:#B8975A; font-weight: 600;">Agende sua avaliação. Link na bio.</p>
+<!-- Story 3 — CTA pro feed, sem entregar nada (Bege) -->
+<div class="page bege" data-document-role="page" data-label="3 - CTA">
+  <div class="eyebrow dm">A RESPOSTA ESTÁ NO FEED</div>
+  <h1 class="headline garamond">O cronograma completo — os quatro prazos, um por um — está no carrossel de hoje.</h1>
+  <p class="body dourado">Arrasta pro feed e confere se ainda dá tempo pra você.</p>
+  <div class="arrow dm">↑</div>
   <div class="footer"><div class="logo">SARA COTA</div></div>
 </div>
 
