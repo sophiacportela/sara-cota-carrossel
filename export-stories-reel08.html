@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Stories — REEL_08 Dra. Sara Cota</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital@1&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --carvao:#2C2C2C;
+    --dourado:#B8975A;
+    --nude:#F5EDE3;
+    --bege:#EDE0D0;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  body{ background:#111; }
+
+  .page{
+    width:1080px;
+    height:1920px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    margin:0 auto 40px auto;
+  }
+
+  /* organic noise texture, no gradients */
+  .texture{
+    position:absolute; inset:0;
+    opacity:.05;
+    mix-blend-mode:multiply;
+    pointer-events:none;
+  }
+  .texture.light{ mix-blend-mode:overlay; opacity:.06; }
+
+  .bg-carvao{ background:var(--carvao); }
+  .bg-bege{ background:var(--bege); }
+  .bg-nude{ background:var(--nude); }
+
+  .wordmark{
+    position:absolute;
+    bottom:64px;
+    left:0; right:0;
+    text-align:center;
+    font-family:'DM Sans',sans-serif;
+    font-weight:500;
+    font-size:15px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+  }
+  .wordmark.on-dark{ color:var(--nude); opacity:.55; }
+  .wordmark.on-light{ color:var(--carvao); opacity:.45; }
+
+  .content{
+    position:relative;
+    z-index:2;
+    padding:0 96px;
+  }
+
+  .label{
+    font-family:'DM Sans',sans-serif;
+    font-weight:500;
+    font-size:13px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:40px;
+  }
+  .label.on-dark{ color:var(--dourado); }
+  .label.on-light{ color:var(--carvao); opacity:.55; }
+
+  .cg-body{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:400;
+    font-size:44px;
+    line-height:1.35;
+    color:var(--carvao);
+  }
+  .cg-body.strong{ font-weight:600; }
+  .cg-body.on-nude{ color:var(--nude); }
+  .cg-body.small{ font-size:34px; line-height:1.5; opacity:.85; }
+
+  .pf-italic{
+    font-family:'Playfair Display',serif;
+    font-style:italic;
+    font-size:56px;
+    line-height:1.3;
+    color:var(--dourado);
+  }
+  .pf-italic.on-nude{ color:var(--nude); }
+
+  .sticker-slot{
+    margin-top:64px;
+    border:1px dashed rgba(44,44,44,.35);
+    border-radius:4px;
+    height:220px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'DM Sans',sans-serif;
+    font-size:14px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:rgba(44,44,44,.4);
+  }
+  .sticker-slot.on-dark{
+    border-color:rgba(245,237,227,.3);
+    color:rgba(245,237,227,.45);
+  }
+
+  .repost-slot{
+    margin:0 96px;
+    aspect-ratio:9/13;
+    border:1px dashed rgba(245,237,227,.3);
+    border-radius:4px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'DM Sans',sans-serif;
+    font-size:14px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:rgba(245,237,227,.4);
+    margin-bottom:56px;
+  }
+
+  .textblock-solid{
+    background:var(--carvao);
+    padding:56px 96px 80px 96px;
+  }
+
+  .cta-line{
+    font-family:'DM Sans',sans-serif;
+    font-weight:500;
+    font-size:26px;
+    letter-spacing:1px;
+    color:var(--nude);
+    margin-top:48px;
+  }
+  .cta-line b{ color:var(--dourado); font-weight:500; }
+</style>
+</head>
+<body>
+
+<!-- STORY 1 — pensamento interno — Bege — pré-aquecimento -->
+<div class="page bg-bege" data-document-role="page" data-label="Story 1 — pensamento interno">
+  <svg class="texture" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+    <filter id="n1"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter>
+    <rect width="100%" height="100%" filter="url(#n1)"/>
+  </svg>
+  <div class="content">
+    <p class="cg-body strong">"será que eu tô<br>exagerando na<br>minha queixa?"</p>
+  </div>
+  <div class="wordmark on-light">Sara Cota</div>
+</div>
+
+<!-- STORY 2 — enquete — Bege — pré-aquecimento -->
+<div class="page bg-bege" data-document-role="page" data-label="Story 2 — enquete">
+  <svg class="texture" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+    <filter id="n2"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter>
+    <rect width="100%" height="100%" filter="url(#n2)"/>
+  </svg>
+  <div class="content">
+    <p class="cg-body">toda semana alguém me pergunta isso de um jeito diferente:</p>
+    <p class="cg-body strong" style="margin-top:32px;">"se eu esperar mais um pouco, resolve sozinho?"</p>
+    <p class="cg-body small" style="margin-top:32px;">a resposta tá no story de daqui a pouco</p>
+    <div class="sticker-slot">espaço para sticker de enquete — "você já pensou isso sobre o seu rosto?" [sim / não]</div>
+  </div>
+  <div class="wordmark on-light">Sara Cota</div>
+</div>
+
+<!-- STORY 3 — distribuição — Carvão — repost + revelação -->
+<div class="page bg-carvao" data-document-role="page" data-label="Story 3 — distribuição (repost)">
+  <svg class="texture light" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+    <filter id="n3"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter>
+    <rect width="100%" height="100%" filter="url(#n3)"/>
+  </svg>
+  <div class="content" style="padding:0;">
+    <div class="repost-slot" style="margin-top:120px;">espaço para o repost nativo do Reel (sticker do Instagram)</div>
+    <div class="content" style="margin-top:8px;">
+      <p class="pf-italic">a resposta clínica é mais desconfortável do que sim ou não</p>
+    </div>
+  </div>
+  <div class="wordmark on-dark">Sara Cota</div>
+</div>
+
+<!-- STORY 4 — aprofundamento — Carvão -->
+<div class="page bg-carvao" data-document-role="page" data-label="Story 4 — aprofundamento">
+  <svg class="texture light" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+    <filter id="n4"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter>
+    <rect width="100%" height="100%" filter="url(#n4)"/>
+  </svg>
+  <div class="content">
+    <p class="label on-dark">no vídeo de hoje</p>
+    <p class="cg-body on-nude">uma coisa que passa rápido: aquelas 3 perguntas do final não são só pra quem vai agendar.</p>
+    <p class="pf-italic" style="margin-top:40px; font-size:44px;">servem até pra quem vai decidir esperar.</p>
+    <p class="cg-body on-nude small" style="margin-top:32px;">esperar com informação é diferente de esperar com medo.</p>
+  </div>
+  <div class="wordmark on-dark">Sara Cota</div>
+</div>
+
+<!-- STORY 5 — objeção + caixa de perguntas — Nude -->
+<div class="page bg-nude" data-document-role="page" data-label="Story 5 — objeção">
+  <svg class="texture" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+    <filter id="n5"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter>
+    <rect width="100%" height="100%" filter="url(#n5)"/>
+  </svg>
+  <div class="content">
+    <p class="cg-body">recebo bastante gente com medo de que uma avaliação já signifique</p>
+    <p class="cg-body strong" style="margin-top:24px;">"vou sair daqui com procedimento marcado."</p>
+    <p class="cg-body small" style="margin-top:32px;">não é assim que funciona aqui.</p>
+    <div class="sticker-slot">espaço para sticker de caixa de perguntas — "me manda sua dúvida sobre isso"</div>
+  </div>
+  <div class="wordmark on-light">Sara Cota</div>
+</div>
+
+<!-- STORY 6 — conversão — Carvão + CTA dourado -->
+<div class="page bg-carvao" data-document-role="page" data-label="Story 6 — conversão">
+  <svg class="texture light" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+    <filter id="n6"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter>
+    <rect width="100%" height="100%" filter="url(#n6)"/>
+  </svg>
+  <div class="content">
+    <p class="cg-body on-nude">se alguma das 3 perguntas te deixou pensando,</p>
+    <p class="pf-italic" style="margin-top:32px;">me manda no direct</p>
+    <p class="cta-line">a palavra <b>"PERGUNTAS"</b> — eu te conto como costumo avaliar isso numa consulta.</p>
+  </div>
+  <div class="wordmark on-dark">Sara Cota</div>
+</div>
+
+</body>
+</html>
