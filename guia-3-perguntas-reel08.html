@@ -17,12 +17,12 @@
   body{ background:#111; }
 
   .page{
-    width:850px;
-    height:1100px;
+    width:794px;
+    height:1123px;
     position:relative;
     overflow:hidden;
     margin:0 auto 40px auto;
-    padding:90px 80px;
+    padding:100px 90px;
   }
   .bg-carvao{ background:var(--carvao); }
   .bg-bege{ background:var(--bege); }
@@ -35,37 +35,39 @@
 
   .eyebrow{
     font-family:'DM Sans',sans-serif; font-weight:500; font-size:12px;
-    letter-spacing:3px; text-transform:uppercase; margin-bottom:24px;
+    letter-spacing:3px; text-transform:uppercase; margin-bottom:28px;
   }
   .eyebrow.on-dark{ color:var(--dourado); }
   .eyebrow.on-light{ color:var(--carvao); opacity:.55; }
 
   .titulo{
     font-family:'Playfair Display',serif; font-style:italic; font-weight:400;
-    font-size:44px; line-height:1.25; color:var(--carvao); margin-bottom:20px;
+    font-size:40px; line-height:1.25; color:var(--carvao); margin-bottom:28px;
   }
   .titulo.on-dark{ color:var(--dourado); }
 
-  .subtitulo{
-    font-family:'Cormorant Garamond',serif; font-weight:400; font-size:24px;
-    line-height:1.5; color:var(--carvao); opacity:.75; max-width:520px;
+  .label-secao{
+    font-family:'DM Sans',sans-serif; font-weight:500; font-size:13px;
+    letter-spacing:2px; text-transform:uppercase; margin-top:36px; margin-bottom:14px;
   }
-  .subtitulo.on-dark{ color:var(--nude); opacity:.85; }
+  .label-secao.on-dark{ color:var(--dourado); }
+  .label-secao.on-light{ color:var(--carvao); opacity:.6; }
 
   .corpo{
-    font-family:'Cormorant Garamond',serif; font-weight:400; font-size:21px;
-    line-height:1.6; color:var(--carvao);
+    font-family:'Cormorant Garamond',serif; font-weight:400; font-size:22px;
+    line-height:1.65; color:var(--carvao);
   }
   .corpo.on-dark{ color:var(--nude); }
 
-  .lista li{ margin-bottom:18px; font-family:'Cormorant Garamond',serif; font-size:20px; line-height:1.55; }
+  .lista{ list-style:none; margin-top:10px; }
+  .lista li{ margin-bottom:16px; font-family:'Cormorant Garamond',serif; font-size:21px; line-height:1.6; padding-left:24px; position:relative; }
+  .lista li::before{ content:"—"; position:absolute; left:0; color:var(--dourado); }
+  .lista.on-dark li{ color:var(--nude); }
   .lista b{ font-weight:600; }
-  .lista{ list-style:none; margin-top:24px; }
-  .lista li::before{ content:"—"; margin-right:10px; color:var(--dourado); }
 
   .pull{
     font-family:'Playfair Display',serif; font-style:italic; font-size:26px;
-    line-height:1.4; color:var(--dourado); margin-top:auto; padding-top:32px;
+    line-height:1.4; color:var(--dourado); margin-top:auto; padding-top:28px;
   }
   .pull.on-nude{ color:var(--carvao); }
 
@@ -77,13 +79,19 @@
   .assinatura.on-light{ color:var(--carvao); opacity:.55; }
 
   .nota-interna{
-    margin-top:28px; padding:16px 20px; border:1px dashed rgba(44,44,44,.3);
+    margin-top:24px; padding:16px 20px; border:1px dashed rgba(44,44,44,.3);
     font-family:'DM Sans',sans-serif; font-size:12px; line-height:1.5;
     color:rgba(44,44,44,.55); border-radius:2px;
   }
+  .nota-interna.on-dark{ border-color:rgba(245,237,227,.3); color:rgba(245,237,227,.5); }
+
+  .aviso{
+    font-family:'DM Sans',sans-serif; font-size:13px; line-height:1.5;
+    color:rgba(44,44,44,.55); margin-top:24px; font-style:italic;
+  }
 
   .pagenum{
-    position:absolute; bottom:40px; right:80px;
+    position:absolute; bottom:44px; right:90px;
     font-family:'DM Sans',sans-serif; font-size:11px; letter-spacing:2px;
     color:var(--carvao); opacity:.35;
   }
@@ -94,83 +102,110 @@
 
 <!-- PÁGINA 1 — CAPA -->
 <div class="page bg-carvao" data-document-role="page" data-label="Capa">
-  <svg class="texture light" viewBox="0 0 850 1100" xmlns="http://www.w3.org/2000/svg">
+  <svg class="texture light" viewBox="0 0 794 1123" xmlns="http://www.w3.org/2000/svg">
     <filter id="t1"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter>
     <rect width="100%" height="100%" filter="url(#t1)"/>
   </svg>
   <div class="content" style="justify-content:center;">
     <p class="eyebrow on-dark">Guia prático</p>
-    <p class="titulo on-dark">As 3 perguntas<br>antes de agendar<br>(ou não)</p>
-    <p class="subtitulo on-dark">Como eu avalio cada uma delas na consulta, a partir do vídeo que você acabou de ver.</p>
+    <p class="titulo on-dark">Como eu avalio as 3 perguntas antes de decidir</p>
+    <p class="corpo on-dark" style="opacity:.85; max-width:520px;">A partir do vídeo que você viu: o passo a passo real de como eu chego numa resposta clínica para cada uma delas, e uma observação que você mesma pode fazer antes de decidir.</p>
     <p class="assinatura on-dark" style="margin-top:64px;">Dra. Sara Cota · Biomédica Esteta · Belo Horizonte</p>
   </div>
 </div>
 
 <!-- PÁGINA 2 — PERGUNTA 01 -->
-<div class="page bg-bege" data-document-role="page" data-label="Pergunta 1">
-  <svg class="texture" viewBox="0 0 850 1100" xmlns="http://www.w3.org/2000/svg">
+<div class="page bg-bege" data-document-role="page" data-label="Pergunta 1 — como eu avalio">
+  <svg class="texture" viewBox="0 0 794 1123" xmlns="http://www.w3.org/2000/svg">
     <filter id="t2"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter>
     <rect width="100%" height="100%" filter="url(#t2)"/>
   </svg>
   <div class="content">
     <p class="eyebrow on-light">Pergunta 01</p>
-    <p class="titulo" style="font-size:32px;">O que exatamente está te incomodando?</p>
-    <p class="corpo">Na avaliação, separo isso em três estruturas possíveis, porque cada uma pede um raciocínio diferente.</p>
+    <p class="titulo" style="font-size:30px;">O que exatamente está te incomodando?</p>
+    <p class="corpo">Na consulta, eu não decido isso só olhando. Uso três passos para descobrir qual estrutura está por trás do que você sente.</p>
+    <p class="label-secao on-light">Como eu avalio</p>
     <ul class="lista">
-      <li><b>Osso:</b> perda de suporte e projeção. A reabsorção muda o contorno do rosto, e isso não é uma questão de pele.</li>
-      <li><b>Ligamento:</b> perda de sustentação. Os tecidos passam a ceder para baixo, mesmo sem ter perdido volume.</li>
-      <li><b>Gordura:</b> mudança de posição. Os compartimentos descem ou se esvaziam, e o volume muda de lugar no rosto.</li>
+      <li><b>Rosto parado e rosto em movimento:</b> observo o mesmo ponto com você em repouso e depois falando ou sorrindo. Osso e ligamento se comportam diferente do que a gordura quando o rosto se move, e isso já direciona a resposta.</li>
+      <li><b>Palpação:</b> em alguns pontos, sentir é mais preciso do que ver. Dá para perceber sustentação óssea e tensão do ligamento com a mão, não só com o olho.</li>
+      <li><b>Avaliação por compartimento:</b> o rosto não muda inteiro de uma vez. Eu mapeio por região, porque o mesmo incômodo visual pode vir de compartimentos diferentes em pessoas diferentes.</li>
     </ul>
-    <p class="pull">O que te incomoda quase nunca é uma coisa só. Geralmente, uma dessas três pesa mais que as outras.</p>
+    <p class="pull">O objetivo não é adivinhar. É isolar qual estrutura está pedindo atenção antes de sugerir qualquer coisa.</p>
+    <div class="nota-interna">NOTA INTERNA: confirmar com a Sara se esses três passos descrevem o processo real dela, e ajustar a linguagem técnica antes de publicar.</div>
   </div>
-  <div class="pagenum on-light">01 / 04</div>
+  <div class="pagenum on-light">02</div>
 </div>
 
 <!-- PÁGINA 3 — PERGUNTA 02 -->
-<div class="page bg-bege" data-document-role="page" data-label="Pergunta 2">
-  <svg class="texture" viewBox="0 0 850 1100" xmlns="http://www.w3.org/2000/svg">
+<div class="page bg-bege" data-document-role="page" data-label="Pergunta 2 — como eu avalio">
+  <svg class="texture" viewBox="0 0 794 1123" xmlns="http://www.w3.org/2000/svg">
     <filter id="t3"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter>
     <rect width="100%" height="100%" filter="url(#t3)"/>
   </svg>
   <div class="content">
     <p class="eyebrow on-light">Pergunta 02</p>
-    <p class="titulo" style="font-size:32px;">Isso mudou nos últimos dois anos?</p>
-    <p class="corpo">Essa pergunta não é sobre o que você vê hoje. É sobre a velocidade da mudança.</p>
-    <p class="corpo" style="margin-top:20px;">Na consulta, comparo o que você relata com o histórico que você traz, fotos antigas ajudam bastante quando existem, para entender se é uma mudança recente e em andamento, ou uma característica antiga que só ficou mais evidente pra você agora.</p>
-    <p class="pull">A velocidade da mudança conta tanto quanto a mudança em si.</p>
-    <div class="nota-interna">NOTA INTERNA: confirmar com a Sara se comparação com fotos antigas faz parte do processo real dela antes de publicar, ou ajustar a frase.</div>
+    <p class="titulo" style="font-size:30px;">Isso mudou nos últimos dois anos?</p>
+    <p class="corpo">Essa pergunta não é sobre o que aparece hoje. É sobre a velocidade da mudança, e isso muda a leitura clínica inteira.</p>
+    <p class="label-secao on-light">Como eu avalio</p>
+    <ul class="lista">
+      <li><b>Comparação temporal:</b> quando você tem fotos de um ou dois anos atrás, com ângulo e luz parecidos, colocamos lado a lado. A comparação direta mostra o que a memória sozinha não mostra com precisão.</li>
+      <li><b>Relato guiado:</b> quando não tem foto, pergunto de um jeito específico: o que mudou primeiro, se foi gradual ou se você notou de uma vez, se alguém mais comentou antes de você perceber.</li>
+    </ul>
+    <p class="pull">Uma mudança recente e uma característica antiga pedem respostas diferentes, mesmo quando parecem a mesma coisa no espelho.</p>
+    <div class="nota-interna">NOTA INTERNA: confirmar com a Sara se ela realmente usa comparação de fotos e relato guiado dessa forma, antes de publicar.</div>
   </div>
-  <div class="pagenum on-light">02 / 04</div>
+  <div class="pagenum on-light">03</div>
 </div>
 
 <!-- PÁGINA 4 — PERGUNTA 03 -->
-<div class="page bg-carvao" data-document-role="page" data-label="Pergunta 3">
-  <svg class="texture light" viewBox="0 0 850 1100" xmlns="http://www.w3.org/2000/svg">
+<div class="page bg-carvao" data-document-role="page" data-label="Pergunta 3 — como eu avalio">
+  <svg class="texture light" viewBox="0 0 794 1123" xmlns="http://www.w3.org/2000/svg">
     <filter id="t4"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter>
     <rect width="100%" height="100%" filter="url(#t4)"/>
   </svg>
   <div class="content">
     <p class="eyebrow on-dark">Pergunta 03</p>
-    <p class="titulo on-dark" style="font-size:32px;">Você está esperando com informação, ou só empurrando a decisão?</p>
-    <p class="corpo on-dark">Essa pergunta não tem exame que responda. Não é sobre o rosto, é sobre você.</p>
-    <p class="corpo on-dark" style="margin-top:20px;">Na conversa, isso aparece: se o que te impede é a real falta de necessidade, ou o medo de encarar a decisão. São coisas diferentes, e mudam o que eu digo depois. Uma muda o plano. A outra muda a conversa.</p>
+    <p class="titulo on-dark" style="font-size:30px;">Você está esperando com informação, ou só empurrando a decisão?</p>
+    <p class="corpo on-dark">Essa não tem exame. Não é sobre o rosto, é sobre você, então a forma de avaliar também muda.</p>
+    <p class="label-secao on-dark">Como eu avalio</p>
+    <p class="corpo on-dark">Pergunto diretamente: o que fez você vir até aqui hoje, e o que te faria esperar mais. A resposta mostra se falta necessidade real, ou se falta coragem de decidir. São duas coisas diferentes, e mudam o que eu digo em seguida. Uma muda o plano. A outra muda a conversa.</p>
   </div>
-  <div class="pagenum on-dark">03 / 04</div>
+  <div class="pagenum on-dark">04</div>
 </div>
 
-<!-- PÁGINA 5 — FECHO -->
-<div class="page bg-nude" data-document-role="page" data-label="Fecho">
-  <svg class="texture" viewBox="0 0 850 1100" xmlns="http://www.w3.org/2000/svg">
+<!-- PÁGINA 5 — AUTOTESTE -->
+<div class="page bg-nude" data-document-role="page" data-label="O que você pode observar sozinha">
+  <svg class="texture" viewBox="0 0 794 1123" xmlns="http://www.w3.org/2000/svg">
     <filter id="t5"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter>
     <rect width="100%" height="100%" filter="url(#t5)"/>
   </svg>
-  <div class="content" style="justify-content:center;">
-    <p class="eyebrow on-light">Como usar</p>
-    <p class="corpo">Essas três perguntas são a base da minha avaliação. Antes de qualquer proposta, elas vêm primeiro.</p>
-    <p class="titulo" style="font-size:30px; margin-top:32px;">Se quiser respostas sobre o seu caso, me envie uma mensagem no direct ou agende uma avaliação.</p>
-    <p class="assinatura on-light" style="margin-top:56px;">Dra. Sara Cota · Biomédica Esteta · Belo Horizonte<br>@saracota.biomedica</p>
+  <div class="content">
+    <p class="eyebrow on-light">Antes da consulta</p>
+    <p class="titulo" style="font-size:30px;">O que você pode observar sozinha</p>
+    <p class="corpo">Isso não substitui uma avaliação. É só uma forma de você chegar mais preparada, com observação em vez de dúvida solta.</p>
+    <ul class="lista">
+      <li><b>Parada x sorrindo:</b> olhe no espelho parada, depois sorria. Se a área que incomoda volta rápido ao lugar quando você sorri, é um dado. Se não volta, é outro.</li>
+      <li><b>Foto de dois anos atrás:</b> se você tiver, compare lado a lado com uma foto de agora, mesmo ângulo, mesma luz se possível. Muda o que você enxerga na hora e o que você lembra depois.</li>
+      <li><b>A pergunta sem plateia:</b> se ninguém tivesse comentado nada sobre o seu rosto, você teria notado essa mudança sozinha? Se sim, é percepção. Se a dúvida só apareceu depois de um comentário, vale separar isso também.</li>
+    </ul>
+    <p class="aviso">Nenhuma dessas observações substitui exame clínico. Elas só organizam o que você já sente, para a conversa na consulta ser mais direta.</p>
   </div>
-  <div class="pagenum on-light">04 / 04</div>
+  <div class="pagenum on-light">05</div>
+</div>
+
+<!-- PÁGINA 6 — FECHO -->
+<div class="page bg-carvao" data-document-role="page" data-label="Fecho">
+  <svg class="texture light" viewBox="0 0 794 1123" xmlns="http://www.w3.org/2000/svg">
+    <filter id="t6"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/></filter>
+    <rect width="100%" height="100%" filter="url(#t6)"/>
+  </svg>
+  <div class="content" style="justify-content:center;">
+    <p class="eyebrow on-dark">Como usar</p>
+    <p class="corpo on-dark">Essas três perguntas, e o jeito de olhar para elas, são a base da minha avaliação. Antes de qualquer proposta, elas vêm primeiro.</p>
+    <p class="titulo on-dark" style="font-size:28px; margin-top:32px;">Se quiser respostas sobre o seu caso, me envie uma mensagem no direct ou agende uma avaliação.</p>
+    <p class="assinatura on-dark" style="margin-top:56px;">Dra. Sara Cota · Biomédica Esteta · Belo Horizonte<br>@saracota.biomedica</p>
+  </div>
+  <div class="pagenum on-dark">06</div>
 </div>
 
 </body>
